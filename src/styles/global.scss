@@ -1,6 +1,6 @@
 $main-font: Dosis-Regular, Arial, sans-serif; /*основной шрифт*/
 
-@mixin title {
+@mixin title {  /*большие заголовки*/
   font-family: $main-font;
   font-size: 50px;
   font-weight: normal;
