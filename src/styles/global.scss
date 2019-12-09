@@ -7,13 +7,18 @@ $main-font: Dosis-Regular, Arial, sans-serif; /*основной шрифт*/
   text-decoration: line-through;
 }
 
-@mixin descr {
+@mixin descr { /*обзацы под большими заголовками*/
   font-family: "Open Sans" ,sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #798285;
 }
 
+*{
+  box-sizing: border-box;
+}
+
+/*обнуление отступов у списков*/
 ul{
   margin: 0;
   padding: 0;

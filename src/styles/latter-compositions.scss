@@ -1,0 +1,50 @@
+.latter-compositions{
+    width: 100%;
+    padding-top: 150px;
+}
+
+.greeting_description-latter{
+    width: 700px;
+    margin: 0 auto;
+}
+
+.container_compositions{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.list-compositions{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.item-compositions{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.item-compositions_info,
+.item-compositions_video{
+    width: 600px;
+    background: #F5F6F6;
+}
+
+.item-compositions_info{
+    position: relative;
+    padding: 20px;
+}
+
+.album-btn_compos{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    width: 196px;
+    height: 56px;
+    color: black;
+    background: none;
+    border: 1px solid black;
+    font-family: Open Sans Bold, sans-serif;
+    font-size: 14px;
+}
