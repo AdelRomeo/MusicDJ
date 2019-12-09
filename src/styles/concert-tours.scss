@@ -1,0 +1,40 @@
+.concert-tours{
+    background: url(../../img/concertBack.png) no-repeat bottom;
+    padding-bottom: 240px;
+}
+
+.greeting_title-tours{
+    color: #62A2AD;
+}
+
+.greeting_description-tours{
+    width: 800px;
+    margin-bottom: 450px;
+}
+
+.album{
+    position: relative;
+    width: 650px;
+    margin-left: 15%;
+}
+
+.album-line_tours{
+    position: absolute;
+    width: 400px;
+    text-align: left;
+}
+
+.album-present{
+    margin-top: 100px;
+}
+
+.album-tours_btn{
+cursor: pointer;
+  width: 196px;
+  height: 56px;
+  color: black;
+  background: none;
+  border: 1px solid black;
+  font-family: Open Sans Bold, sans-serif;
+  font-size: 14px;
+}
