@@ -1,0 +1,17 @@
+.album-container{
+    width: 100%;
+    background: #ffffff;
+}
+
+.album-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.album-item_alb{
+    width: 388px;
+    height: 422px;
+}
