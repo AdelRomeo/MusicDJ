@@ -9,9 +9,31 @@
     justify-content: space-between;
     width: 1220px;
     margin: 0 auto;
+    margin-top: 140px;
 }
 
 .album-item_alb{
-    width: 388px;
+    width: 384px;
     height: 422px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-repeat: no-repeat;
+    &:nth-child(1){
+        background: url(../../img/album1.png);
+    };
+    &:nth-child(2){
+        background: url(../../img/album2.png);
+    };
+    &:nth-child(3){
+        background: url(../../img/album3.png);
+    };
+    &:nth-child(4){
+        background: url(../../img/album4.png);
+    };
+    &:nth-child(5){
+        background: url(../../img/album5.png);
+    };
+    &:nth-child(6){
+        background: url(../../img/album6.png);
+    };
 }
