@@ -1,0 +1,32 @@
+@import 'global';
+
+.history{
+    width: 100%;
+    padding-top: 150px;
+    background: #ffffff url(../../img/historyBack.png) bottom no-repeat;
+}
+
+.greeting_descr-history{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.history_list{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding-bottom: 600px;
+}
+
+.history_item{
+    width: 240px;
+    text-align: center;
+    font-size: 35px;
+    font-family: Dosis, sans-serif;
+    color: #575a59;
+}
+
+.history_story{
+    @include descr;
+}
