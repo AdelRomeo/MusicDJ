@@ -13,6 +13,10 @@
   }
 }
 
+.main-header_burger{
+  display: none;
+}
+
 .container_main-mav{
   width: 100%;
   background: rgba(229,230,230, 0.7);
@@ -32,4 +36,28 @@
 .main-nav_item a{
   color: #606060;
   text-decoration: none;
+}
+
+
+/*<<<<----разрешение для планшета---->>>>*/
+@media (min-width: 750px) and (max-width: 1537px){
+
+  .main-header{
+    position: relative;
+  }
+
+  .container_main-mav{
+    display: none;
+  }
+
+  .main-header_burger{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    display: block;
+    background: url("../../img/burger.png");
+    border: none;
+    width: 95px;
+    height: 68px;
+  }
 }
