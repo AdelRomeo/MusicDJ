@@ -37,3 +37,23 @@
         background: url(../../img/album6.png);
     };
 }
+
+
+/*<<<----разрешение для планшета---->>>*/
+@media (min-width: 750px) and (max-width: 1537px){
+
+    .album-container{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .album-list{
+        justify-content: space-around;
+    }
+
+    .album-item_alb{
+        width: 370px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
