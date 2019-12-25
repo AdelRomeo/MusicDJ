@@ -31,3 +31,12 @@
     height: 1px;
     background: #000000;
 }
+
+
+/*<<<----разрешение для планшета---->>>*/
+@media (min-width: 750px) and (max-width: 1537px){
+
+    .events-container{
+        right: 10%;
+    }
+}
