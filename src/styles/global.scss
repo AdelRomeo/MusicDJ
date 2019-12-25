@@ -41,3 +41,16 @@ ul{
 .greeting_description{
   @include descr;
 }
+
+
+/*<<<----разрешение для планшета---->>>*/
+@media (min-width: 750px) and (max-width: 1537px){
+
+  *{
+    max-width: 100%;
+  }
+
+  main{
+    overflow: hidden;
+  }
+}
