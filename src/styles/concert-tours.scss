@@ -1,4 +1,5 @@
 .concert-tours{
+    padding-top: 100px;
     background: url(../../img/concertBack.png) no-repeat bottom;
     padding-bottom: 240px;
 }
@@ -38,4 +39,19 @@
     border: 1px solid black;
     font-family: Open Sans Bold, sans-serif;
     font-size: 14px;
+}
+
+
+/*<<<----разрешение для планшета---->>>*/
+@media (min-width: 750px) and (max-width: 1537px){
+
+    .concert-tours{
+        padding-top: 100px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .album{
+        margin-left: 5%;
+    }
 }
