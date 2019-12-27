@@ -50,3 +50,12 @@
 .slider-description{
     margin-bottom: 60px;
 }
+
+/*<<<----Стили для смартфона---->>>*/
+@media (max-width: 749px){
+
+  .slider_arrow-left,
+  .slider_arrow-right{
+    display: none;
+  }
+}

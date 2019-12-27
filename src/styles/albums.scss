@@ -39,8 +39,8 @@
 }
 
 
-/*<<<----разрешение для планшета---->>>*/
-@media (min-width: 750px) and (max-width: 1537px){
+/*<<<----Стили для планшета и смартфона---->>>*/
+@media (max-width: 1537px){
 
     .album-container{
         padding-left: 2%;
@@ -56,4 +56,14 @@
         margin-left: 10px;
         margin-right: 10px;
     }
+}
+
+
+/*<<<<----Стили для смартфона---->>>>*/
+@media (max-width: 749px) {
+
+  .album-item_alb{
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
