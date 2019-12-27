@@ -39,8 +39,8 @@
 }
 
 
-/*<<<----разрешение для планшета---->>>*/
-@media (min-width: 750px) and (max-width: 1537px){
+/*<<<----Стили для планшета и смартфона---->>>*/
+@media (max-width: 1537px){
 
   .main-header{
     position: relative;
@@ -55,9 +55,21 @@
     right: 30px;
     top: 30px;
     display: block;
-    background: url("../../img/burger.png");
+    background: url("../../img/burger.png") no-repeat;
     border: none;
     width: 95px;
     height: 68px;
+  }
+}
+
+
+/*<<<----Стили для смартфонов---->>>*/
+@media (max-width: 749px){
+
+  .main-header_burger{
+    background-size: contain;
+    border: none;
+    width: 82px;
+    height: 60px;
   }
 }
