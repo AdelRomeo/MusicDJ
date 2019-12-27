@@ -34,9 +34,9 @@
 
 
 /*<<<----разрешение для планшета---->>>*/
-@media (min-width: 750px) and (max-width: 1537px){
+@media (max-width: 1537px){
 
     .events-container{
-        right: 10%;
+        right: 0;
     }
 }

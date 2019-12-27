@@ -43,8 +43,8 @@ ul{
 }
 
 
-/*<<<----разрешение для планшета---->>>*/
-@media (min-width: 750px) and (max-width: 1537px){
+/*<<<----Стили для планшета и смартфона---->>>*/
+@media (max-width: 1537px){
 
   *{
     max-width: 100%;
@@ -52,5 +52,25 @@ ul{
 
   main{
     overflow: hidden;
+  }
+}
+
+/*<<<----Стили для смартфона---->>>*/
+@media (max-width: 749px) {
+
+  .discography{
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .concert-tours,
+  .latter-compositions,
+  .slider-item,
+  .events-container,
+  .history,
+  .contact{
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
