@@ -33,6 +33,13 @@
   font-size: 17px;
 }
 
+#link1{
+}
+
+.main-nav_item{
+  opacity: 0;
+}
+
 .main-nav_item a{
   color: #606060;
   text-decoration: none;
@@ -52,6 +59,7 @@
 
   .main-header_burger{
     position: absolute;
+    opacity: 0;
     right: 30px;
     top: 30px;
     display: block;
