@@ -8,49 +8,71 @@ function f(link) {
         setTimeout(()=>{ // запуск таймаута
             if (document) { // проверка существует ли document
                 resolve(); // разрешение промиса
+                link.style.opacity = '1';  // изменение прозрачности
             }
         }, 800); // таймер между промисами
     });
 }
 
-f() // вызов функции
+f(links[0]) // вызов функции
     .then(() => { // это происходит когда наступает resolve()
-        links[0].style.opacity = '1'; // изменение прозрачности
         console.log('dada');
-        return f(); // возврат нового промиса
+        return f(links[1]); // возврат нового промиса
     })
     .then(() => {
-        links[1].style.opacity = '1';
         console.log('dada');
-        return f();
+        return f(links[2]);
     })
     .then(() => {
-        links[2].style.opacity = '1';
         console.log('dada');
-        return f();
+        return f(links[3]);
     })
     .then(() => {
-        links[3].style.opacity = '1';
         console.log('dada');
-        return f();
+        return f(links[4]);
     })
     .then(() => {
-        links[4].style.opacity = '1';
         console.log('dada');
-        return f();
+        return f(links[5]);
     })
     .then(() => {
-        links[5].style.opacity = '1';
         console.log('dada');
-        return f();
+        return f(links[6]);
     })
     .then(() => {
-        links[6].style.opacity = '1';
         console.log('dada');
-        return f();
-    })
-    .then(() => {
-        links[7].style.opacity = '1';
-        console.log('dada');
-        return f();
+        return f(links[7]);
     });
+//--------------------------------------
+
+let list = document.querySelectorAll('.main-nav_item button');
+let header = document.querySelector('.main-header');
+
+if (screen.width > 1537){
+    header.addEventListener('click', (e)=>{
+        if (e.target === list[0]){
+            window.scrollTo(0,0);
+        }
+        if (e.target === list[1]){
+            window.scrollTo(0,900);
+        }
+        if (e.target === list[2]){
+            window.scrollTo(0,2970);
+        }
+        if (e.target === list[3]){
+            window.scrollTo(0,4420);
+        }
+        if (e.target === list[4]){
+            window.scrollTo(0,6835);
+        }
+        if (e.target === list[5]){
+            window.scrollTo(0,7910);
+        }
+        if (e.target === list[6]){
+            window.scrollTo(0,9265);
+        }
+        if (e.target === list[7]){
+            window.scrollTo(0,100000);
+        }
+    });
+}

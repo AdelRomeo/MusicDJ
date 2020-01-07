@@ -22,6 +22,8 @@
   background: rgba(229,230,230, 0.7);
   padding-top: 20px;
   padding-bottom: 20px;
+  position: fixed;
+  z-index: 999;
 }
 
 .main-nav_list{
@@ -33,16 +35,22 @@
   font-size: 17px;
 }
 
-#link1{
-}
-
 .main-nav_item{
   opacity: 0;
 }
 
-.main-nav_item a{
+.main-nav_item button{
+  cursor: pointer;
+  font-family: $main-font;
+  box-sizing: border-box;
   color: #606060;
+  border: none;
+  background: none;
   text-decoration: none;
+  transition: none;
+  &:focus{
+    outline: none;
+  }
 }
 
 
