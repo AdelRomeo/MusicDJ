@@ -16,31 +16,24 @@ function f(link) {
 
 f(links[0]) // вызов функции
     .then(() => { // это происходит когда наступает resolve()
-        console.log('dada');
         return f(links[1]); // возврат нового промиса
     })
     .then(() => {
-        console.log('dada');
         return f(links[2]);
     })
     .then(() => {
-        console.log('dada');
         return f(links[3]);
     })
     .then(() => {
-        console.log('dada');
         return f(links[4]);
     })
     .then(() => {
-        console.log('dada');
         return f(links[5]);
     })
     .then(() => {
-        console.log('dada');
         return f(links[6]);
     })
     .then(() => {
-        console.log('dada');
         return f(links[7]);
     });
 //--------------------------------------
@@ -51,28 +44,55 @@ let header = document.querySelector('.main-header');
 if (screen.width > 1537){
     header.addEventListener('click', (e)=>{
         if (e.target === list[0]){
-            window.scrollTo(0,0);
+            scrollToo(0); // вызов функции. в скобках до скольки скролить
         }
         if (e.target === list[1]){
-            window.scrollTo(0,900);
+            scrollToo(900);
         }
         if (e.target === list[2]){
-            window.scrollTo(0,2970);
+            scrollToo(2960);
         }
         if (e.target === list[3]){
-            window.scrollTo(0,4420);
+            scrollToo(4420);
         }
         if (e.target === list[4]){
-            window.scrollTo(0,6835);
+            scrollToo(6835);
         }
         if (e.target === list[5]){
-            window.scrollTo(0,7910);
+            scrollToo(7920);
         }
         if (e.target === list[6]){
-            window.scrollTo(0,9265);
+            scrollToo(9245);
         }
         if (e.target === list[7]){
-            window.scrollTo(0,100000);
+            scrollToo(10500);
         }
     });
 }
+
+
+function scrollToo(coordinate) { // универсальная функция
+    let numb = window.pageYOffset; // положение страницы. на сколько проскролена. просто возвращает число
+
+    if (numb > coordinate){ // если то положение страницы которое есть сейчас больше чем то которое нужно
+        let timer = setInterval(()=>{ // запуск таймер
+            numb -= 20; // уменьшение положения страницы. скрол вверх
+            window.scrollTo(0,numb); // присваивание нового положения страницы
+            console.log(numb);
+            if (numb <= coordinate){ // если дошло до нужного положения
+                clearInterval(timer); // остановка таймера
+            }
+        }, 10); // интервал
+    }
+    if (numb < coordinate){ // если то положение страницы которое есть сейчас меньше чем то которое нужно
+        let timer = setInterval(()=>{ // запуск таймер
+            numb += 20; // увеличение положения страницы. скрол вниз
+            window.scrollTo(0,numb); // присваивание нового положения страницы
+            console.log(numb);
+            if (numb >= coordinate){ // если дошло до нужного положения
+                clearInterval(timer); // остановка таймера
+            }
+        }, 20); // интервал
+    }
+}
+// ----------------------
