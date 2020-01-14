@@ -1,6 +1,3 @@
-const myBody = document.querySelector('body');
-
-const burger = document.querySelector('.main-header_burger');
 const links = document.querySelectorAll('.main-nav_item');
 
 function f(link) {
@@ -41,8 +38,8 @@ f(links[0]) // вызов функции
 let list = document.querySelectorAll('.main-nav_item button');
 let header = document.querySelector('.main-header');
 
-if (screen.width > 1537){
-    header.addEventListener('click', (e)=>{
+if (window.innerWidth > 1537){ // проверка на ширину окна
+    header.addEventListener('click', (e)=>{ // e - то на что нажали
         if (e.target === list[0]){
             scrollToo(0); // вызов функции. в скобках до скольки скролить
         }
@@ -71,14 +68,13 @@ if (screen.width > 1537){
 }
 
 
-function scrollToo(coordinate) { // универсальная функция
+function scrollToo(coordinate) { // универсальная функция для скролла
     let numb = window.pageYOffset; // положение страницы. на сколько проскролена. просто возвращает число
 
     if (numb > coordinate){ // если то положение страницы которое есть сейчас больше чем то которое нужно
         let timer = setInterval(()=>{ // запуск таймер
             numb -= 20; // уменьшение положения страницы. скрол вверх
             window.scrollTo(0,numb); // присваивание нового положения страницы
-            console.log(numb);
             if (numb <= coordinate){ // если дошло до нужного положения
                 clearInterval(timer); // остановка таймера
             }
@@ -88,11 +84,24 @@ function scrollToo(coordinate) { // универсальная функция
         let timer = setInterval(()=>{ // запуск таймер
             numb += 20; // увеличение положения страницы. скрол вниз
             window.scrollTo(0,numb); // присваивание нового положения страницы
-            console.log(numb);
             if (numb >= coordinate){ // если дошло до нужного положения
                 clearInterval(timer); // остановка таймера
             }
-        }, 20); // интервал
+        }, 10); // интервал
     }
 }
 // ----------------------
+
+const menuVisual = document.querySelector('.main-header_burger'); // кнопка показа меню
+const menu = document.querySelector('.container_main-mav'); // меню
+
+menuVisual.addEventListener('click',()=>{ // добавление слушателя(обработчика)
+    menu.classList.toggle('visual'); // переключение класса
+    menuVisual.classList.toggle('btnUpDown'); // переключение класса
+});
+// ------------------------
+
+const sliderLeft = document.querySelector('.slider_arrow-left');
+const sliderRight = document.querySelector('.slider_arrow-right');
+
+

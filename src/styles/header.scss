@@ -61,20 +61,38 @@
     position: relative;
   }
 
-  .container_main-mav{
-    display: none;
-  }
-
   .main-header_burger{
+    cursor: pointer;
     position: absolute;
-    opacity: 0;
     right: 30px;
     top: 30px;
-    display: block;
     background: url("../../img/burger.png") no-repeat;
     border: none;
     width: 95px;
     height: 68px;
+    z-index: 99999;
+  }
+}
+
+@media (max-width: 900px){ /*<<<----for nav-menu---->>>*/
+
+  .container_main-mav{
+    display: none;
+    width: 100%;
+    position: absolute;
+  }
+
+  .main-header_burger{
+    display: block;
+  }
+
+  .main-nav_list{
+    flex-direction: column;
+  }
+
+  .main-nav_item{
+    text-align: center;
+    margin-bottom: 10px;
   }
 }
 

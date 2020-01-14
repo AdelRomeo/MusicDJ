@@ -44,6 +44,16 @@ ul{
 }
 
 
+/*класс появления объектов для js*/
+.visual{
+  display: block;
+}
+
+.btnUpDown{
+  top: 300px;
+  transform: rotate(180deg);
+}
+
 /*<<<----Стили для планшета и смартфона---->>>*/
 @media (max-width: 1537px){
 
