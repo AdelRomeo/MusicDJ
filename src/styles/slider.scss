@@ -6,24 +6,44 @@
     padding-top: 140px;
     padding-bottom: 170px;
     position: relative;
-    display: flex;
+    min-height: 550px;
+    overflow: hidden;
 }
 
 .slider_arrow-left,
 .slider_arrow-right{
     top: calc(50% - 90px);
     cursor: pointer;
-    right: 0;
     position: absolute;
+    z-index: 2;
+}
+
+.slider_arrow-right{
+    display: none;
+    right: 0;
+    &:hover{
+        right: 5px;
+    }
 }
 
 .slider_arrow-left{
     transform: scale(-1, 1);
     left: 0;
+    &:hover{
+        left: 5px;
+    }
+}
+
+.slider-container{
+    position: absolute;
+    width: 300%;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+    max-width: none !important;
 }
 
 .slider-item{
-    width: 900px;
     margin: 0 auto;
     text-align: center;
 }
@@ -45,7 +65,7 @@
 .slider-description,
 .slider-rules{
     @include descr;
-    width: 515px;
+    max-width: 515px;
     margin: 0 auto;
 }
 

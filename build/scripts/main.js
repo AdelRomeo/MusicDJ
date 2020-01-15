@@ -101,7 +101,37 @@ menuVisual.addEventListener('click',()=>{ // добавление слушате
 });
 // ------------------------
 
-const sliderLeft = document.querySelector('.slider_arrow-left');
-const sliderRight = document.querySelector('.slider_arrow-right');
+const sliderLeft = document.querySelector('.slider_arrow-left'); // arrow left
+const sliderRight = document.querySelector('.slider_arrow-right'); // arrow right
+const slider = document.querySelector('.slider-container'); // container
+
+let marg = 0; // положение контейнера по умолчанию. положение от 0 до -200 (3 блока. 0, -100, -200)
+
+sliderLeft.addEventListener('click', ()=>{
+    if (marg <= 0){ // если marg в минусе (контейнер сдвинут от положения по умолчанию)
+        sliderRight.style.display = 'block'; // показывать правую кнопку
+    } else { // если контейнер не сдвинут влево (положение по умолчанию)
+        sliderRight.style.display = 'none'; // скрывать правую кнопку
+    }
+    if (marg <= -99){ // если marg меньше -99 (от -100 до -200) на экране последний правый блок
+        sliderLeft.style.display = 'none'; // скрывать левую кнопку.
+    } else { // иначе. если на экране средний или невый блок
+        sliderLeft.style.display = 'block'; // показывать левую кнопку
+    }
+    marg += -100; // изменение marg
+    slider.style.left = marg+'%'; // сдвиг контейнера влево
+});
+
+sliderRight.addEventListener('click', ()=>{
+    if (marg >= -200){ // если marg больше -200 (от 0 до 199)
+        sliderLeft.style.display = 'block'; // показывать левую кнопку
+    }
+    if (marg >= -101){
+        sliderRight.style.display = 'none'; // скрытие правой кнопки когда контейнер в положении по умолчанию
+    }
+    marg += 100; // изменение marg
+    slider.style.left = marg+'%'; // сдвиг контейнера в право
+});
+
 
 
