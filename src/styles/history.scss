@@ -20,13 +20,43 @@
 }
 
 .history_item{
-    width: 240px;
+    position: relative;
+    width: 300px;
     text-align: center;
-    font-size: 35px;
     font-family: Dosis, sans-serif;
     color: #575a59;
+    &>h3{
+        cursor: pointer;
+        max-width: 120px;
+        margin: 0 auto;
+        font-weight: normal;
+        font-size: 35px;
+        padding: 0;
+    }
 }
 
 .history_story{
+    transition: all ease 1100ms;
+    visibility: hidden;
+    margin: 10px;
+    opacity: 0;
     @include descr;
+}
+
+
+
+
+/*<<<----Стили для планшета и смартфона---->>>*/
+@media (max-width: 1537px){
+    .history_list{
+        width: 330px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .history_item{
+        margin: 0 auto;
+        margin-top: 70px;
+    }
 }

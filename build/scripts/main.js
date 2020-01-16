@@ -53,13 +53,13 @@ if (window.innerWidth > 1537){ // проверка на ширину окна
             scrollToo(4420);
         }
         if (e.target === list[4]){
-            scrollToo(6835);
+            scrollToo(6750);
         }
         if (e.target === list[5]){
-            scrollToo(7920);
+            scrollToo(7840);
         }
         if (e.target === list[6]){
-            scrollToo(9245);
+            scrollToo(9180);
         }
         if (e.target === list[7]){
             scrollToo(10500);
@@ -133,5 +133,19 @@ sliderRight.addEventListener('click', ()=>{
     slider.style.left = marg+'%'; // сдвиг контейнера в право
 });
 
+// ------------------
 
+let storyList = document.querySelectorAll('.history_story'); // список абзацев
+let storyTitle = document.querySelectorAll('.history_item > h3'); // список заголовков
+
+
+ for (let i = 0; i < storyTitle.length; i++){ // перебор всех заголовков
+     storyList[0].classList.add('visual'); // добавление видимости первому абзацу
+     storyTitle[i].addEventListener('click', ()=>{ // клики по всем заголовкам
+        for (let k = 0; k < storyList.length; k++){ // перебор всех абзацев
+            storyList[k].classList.remove('visual'); // делаем все обзацы невидимыми
+        }
+        storyList[i].classList.add('visual'); // делаем видимым абзац номер которого совпадает с номером заголовка
+     });
+ }
 
